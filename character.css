@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url('./img/chichikov.png') 60 60, auto;
+}
+
+body {
+    background-color: rgb(167, 158, 142);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mist {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgb(255, 234, 176), rgb(82, 82, 82));
+    mix-blend-mode: normal;
+    overflow: hidden;
+}
+
+.mist img {
+    position: absolute;
+    mix-blend-mode: difference;
+    width: 1780px;
+}
+.mist img:nth-child(1) {
+    animation: moveRightLeft2 5s linear infinite alternate;
+}
+.mist img:nth-child(2) {
+    animation: moveRightLeft 5s linear infinite alternate;
+}
+@keyframes moveRightLeft {
+    0% {
+      left: -50px;
+    }
+    100% {
+      left: -10px;
+    }
+  }
+
+  @keyframes moveRightLeft2 {
+    0% {
+      left: -10px;
+    }
+    100% {
+      left: -50px;
+    }
+  }
+
+  .container {
+    position: relative;
+    top: 25vh;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: difference;
+    
+  }
+  .map {
+    position: absolute;
+    width: 55%;
+    animation: zoom 2s  forwards;
+   
+  }
+@keyframes zoom {
+  0% {
+    transform:  rotateX(0deg) translateY(0px) perspective(0px);
+  }
+  100% {
+    transform:  rotateX(60deg) translateY(-500px) translateX(-500px)perspective(5000px);
+    width: 3000px;
+  }
+}
+
+
+
+
+
+  .profile {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40%;
+    width: 30vw;
+    /* border: 1px white solid; */
+
+    display: flex;
+    flex-direction: column; /* 수정: 세로로 정렬하려면 flex-direction을 column으로 변경 */
+    align-items: center;
+    mix-blend-mode: luminosity;
+
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+  }
+
+  .name {
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+
+  }
+ 
+  .pic {
+    width: 500px;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+    70% {
+        opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  .conv {
+    position: absolute;
+    width: 800px;
+    height: 100vh;
+    /* background-color: rgb(59, 70, 80); */
+    top: 110px;
+    left: calc(50% - 400px);
+    animation: fadeIn 3s ease-in forwards;
+  }
+
+  .line {
+    position: absolute;
+    width: 800px;
+  }
+
+.con {
+  position: absolute;
+  color: aliceblue;
+  width: 200px;
+  height: 100px;
+  /* background-color: aliceblue; */
+  font-size: 11px;
+  line-height: 1.5;
+  mix-blend-mode: difference;
+  opacity: 0%;
+}
+.con1 {
+  top: 30px;
+  left: 100px;
+}
+.con2 {
+  top: 50px;
+  left: 640px;
+}
+.con3 {
+  top: 150px;
+  left: -80px;
+}
+.con4 {
+  top: 230px;
+  left: 750px;
+}
+.con5 {
+  top: 450px;
+  left: -50px;
+}
+.con:hover {
+  opacity: 100%;
+}
+
+.back {
+  position: absolute;
+  left: calc(50% - 350px);
+  bottom: 200px;
+  width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 16px solid darkred; /* 정삼각형 색상 지정 */
+    animation: fadeIn 3s ease-in forwards, clickme 1s infinite;
+}
+@keyframes clickme {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.back:hover {
+  cursor: pointer;
+}
