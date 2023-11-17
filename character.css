@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    cursor: url('./img/chichikov.png') 60 60, auto;
+    cursor: url('./chichikov.png') 60 60, auto;
 }
 
 body {
@@ -16,6 +16,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
 
 .mist {
     position: absolute;
@@ -80,10 +81,6 @@ body {
   }
 }
 
-
-
-
-
   .profile {
     position: absolute;
     left: 50%;
@@ -102,12 +99,13 @@ body {
   }
 
   .name {
-    font-size: 35px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
     color: antiquewhite;
     letter-spacing: 8px;
     margin-bottom: 30px;
-
+    font-family: "matrix-ii-display-inline-ext", sans-serif;
+font-weight: 800;
+font-style: normal;
   }
  
   .pic {
@@ -152,6 +150,7 @@ body {
   mix-blend-mode: difference;
   opacity: 0%;
   font-family: 'MapoFlowerIsland';
+  word-break: keep-all;
 }
 .con1 {
   top: 30px;
